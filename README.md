@@ -1,3 +1,6 @@
+# FoodeMedia
+    "this socal site for share the foodle image with recipes and its like readit,pintrest,intsatgarm"
+
 My Goal is to learn the backend in django 
 
 # Django Project File Structure 
@@ -81,7 +84,7 @@ My Goal is to learn the backend in django
     this floder keep the database version records and migration records 
     it's track the scheme
 
-# mean file 
+## mean file 
 1. manage.py:
         this file mean use for the command line  control center 
 
@@ -97,4 +100,47 @@ My Goal is to learn the backend in django
     static:
     *frontend assets
 
-    
+
+## features
+- User Authentication
+    Sign up / Login
+    Email or phone verification
+    Password reset
+- User Profile
+    Profile photo, bio, username
+    Followers / Following count
+    Edit profile
+- Post Creation
+    Text posts
+    Image / video upload
+    Captions, hashtags
+- Feed / Timeline
+    Posts from followed users
+    Latest or algorithm-based feed
+- Like / Reaction System
+    Like, heart, etc.
+    Real-time count updates
+- Comments
+    Comment on posts
+    Reply to comments
+- Follow / Unfollow
+    Public & private accounts
+    Follow requests (optional)
+
+## Technologies Used
+- Python
+- Django
+- SQLite, PostgrSQL
+- HTML, CSS, Bootstrap
+
+## Installation
+- djnago
+
+
+
+
+
+
+## Author
+- Name: Karan
+- GitHub: https://github.com/karan-kharad
