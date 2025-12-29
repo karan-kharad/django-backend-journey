@@ -135,7 +135,8 @@ My Goal is to learn the backend in django
 
 ## Installation
 - djnago
-
+- BeautifulSoup :this package use for webcarkar
+- requests :  this for the rquests for anther urls 
 
 
 
@@ -144,3 +145,13 @@ My Goal is to learn the backend in django
 ## Author
 - Name: Karan
 - GitHub: https://github.com/karan-kharad
+
+
+## Web Crawler in Python
+In Python, a web crawler is a script/program that:
+Sends HTTP requests to websites
+Downloads HTML pages
+Extracts links and data
+Automatically visits new pages
+for this we use the BeautifulSoup
+
