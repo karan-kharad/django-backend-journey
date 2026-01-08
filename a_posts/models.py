@@ -9,6 +9,7 @@ class Post(models.Model):
     url = models.URLField(max_length=500, null=True)
     image = models.URLField(max_length=500)
     body = models.TextField()
+    tag = models.ManyToManyField('Tag')
     cretaed = models.DateTimeField(auto_now=True)
     id = models.CharField(max_length=100, default=uuid.uuid4, unique=True, primary_key=True,editable=False)
 
@@ -18,3 +19,14 @@ class Post(models.Model):
     
     class Meta:
         ordering =['-cretaed']
+
+
+
+
+
+class Tag(models.Model):
+    name = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=200,unique=True)
+
+    def __str__(self):
+        return str(self.name)

@@ -22,4 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_view,name='home'),
     path('post/create/',post_create_view,name='post-create'),
+    path('post/delete/<pk>',post_delet,name='delete-post'),
+    path('post/edit/<pk>',edit_post_view,name='post-edit'),
+    path('post/<pk>',post_page_view,name='post'),
 ]
