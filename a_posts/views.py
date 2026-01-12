@@ -4,14 +4,29 @@ from.forms import *
 from bs4 import BeautifulSoup
 import requests
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
-def home_view(request):
+def home_view(request, tag=None):
+    if tag:
+        posts = Post.objects.filter(tag__slug=tag)
+        tag = get_object_or_404(Tag, slug=tag)
+    else:
+        posts = Post.objects.all()
+    
+    categories = Tag.objects.all()
 
-    posts = Post.objects.all()
+    context={
+        'posts':posts,
+        'categories':categories,
+        'tag':tag
+    }
+    return render(request, 'a_posts/home.html',context)
+
+    
     return render(request, 'a_posts/home.html',{'posts':posts})
-
-
+@login_required
 def post_create_view(request):
 
     form = PostCreateForm()

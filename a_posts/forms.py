@@ -1,4 +1,4 @@
-from django.forms import ModelForm
+from django.forms import ModelForm,forms
 from django import forms
 from.models import *
 
@@ -34,3 +34,12 @@ class PostEditFrom(ModelForm):
             'body' : forms.Textarea(attrs={'rows':3,'placeholder':'write a caption......','class':'font1 text-4xl'}),
              'tag':forms.CheckboxSelectMultiple(),
         }
+
+class CustamSignupForm(forms.Form):
+    phone = forms.CharField(max_length=13, required=True, label='Phone Number')
+   
+   
+    def signup(self, request, user):
+        porfile = UserProfile(user=user)
+        porfile.phone = self.cleaned_data.get('phone','')
+        porfile.save()

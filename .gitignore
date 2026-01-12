@@ -1,2 +1,11 @@
-venv
-__pycahe__
+# Virtual environment
+.venv/
+
+# Django
+__pycache__/
+*.pyc
+db.sqlite3
+media/
+
+# Local apps to ignore
+templates/account/
